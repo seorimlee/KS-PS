@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-size: 12px;
+        line-height: 13px;
+        font-family: "Helvetica", Arial, serif;
+        background-color: #d8d7d0;
+    }
+    table{
+        width: 100%;
+        border-spacing: 0;
+    }
+    table.header{
+        margin-bottom: 70vh;
+    }
+    th{
+        padding: 0;
+    }
+    td{
+        padding: 0;
+        vertical-align: top;
+    }
+    .header td:nth-child(3){
+        text-align: right;
+    }
+    .date td:nth-child(3){
+        text-align: right;
+    }
+    .main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    .main .row{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 110px;
+    }
+
+    .row#w10 img{
+        width: 10%;
+    }
+    .row#w30 img{
+        width: 30%;
+        padding-right: 20%;
+    }
+    .row#w10{
+        justify-content: space-between;
+    }
+    .row#w30{
+        position: relative;
+        justify-content: space-evenly;
+    }
+    select {
+    background-color: rgb(248, 248, 248);
+    cursor: default;
+    font: 400 11px system-ui;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(166, 166, 166);
+    border-image: initial;
+}
+
+@media screen and (min-width: 316px) and (max-width: 500px){
+    .row#w10 img{
+        width: 49%;
+        padding-bottom: 5%;
+    }
+    .row#w30{
+        justify-content: space-between;
+    }
+    .row#w30 img{
+        width: 49%;
+        padding-bottom: 5%;
+        padding-right: 0%;
+    }
+}
+
+</style>
+<body>
+    <table class="header">
+        <tr>
+            <td>KS-PS</td>
+            <td>lee seoerim<br>tjfla253@gmail.com</td>
+            <td>date.
+                <select class="date">
+                    <option value="2023.12.21">2024.2.15</option>
+                    <option value="2023.12.21">2024.2.1</option>
+                    <option value="2023.12.21">2024.1.15</option>
+                    <option value="2023.12.21">2024.1.1</option>
+                    <option value="2023.12.21">2023.12</option>
+                    <option value="2023.12.21">2023.11</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <table class="date">
+        <tr>
+            <td></td>
+            <td></td>
+            <td>2023.12 - 2024. 02</td>
+        </tr>
+    </table>
+
+    <div class="main">
+        <div class="row" id="w10">
+            <img src="img/1.jpg" alt="/">
+            <img src="img/2.jpg" alt="/">
+            <img src="img/3.jpg" alt="/" style="padding-right: 20%;">
+            <img src="img/8.jpg" alt="/">
+            <img src="img/5.jpg" alt="/">
+        </div>
+    </div>
+    <table class="date">
+        <tr>
+            <td></td>
+            <td></td>
+            <td>2023.12 - 2024. 02</td>
+        </tr>
+    </table>
+    <div class="main">
+        <div class="row" id="w30">
+            <img src="img/7.jpg" alt="/">
+            <img src="img/2.jpg" alt="/">
+        </div>
+    </div>
+
+
+
+</body>
+</html>
