@@ -64,7 +64,8 @@
     z-index: 1;
     width: 100%;
     padding: 0;
-    top: 0px;
+    margin-bottom: 50vh;
+    padding-bottom: 50vh;
 }
     li{
         background-color: #0000;
@@ -134,7 +135,7 @@
     border-image: initial;
     margin-right: 10px;
 }
-.draw-pad{margin-top: 80px;}
+
 
 @media screen and (min-width: 316px) and (max-width: 500px){
     .row#w10 img{
@@ -183,44 +184,7 @@ border: 1px solid gray;
         </li>
     </ul>
     
-    <div class="draw-pad">
-       <canvas id="canvas1"
-               onmousedown="startPaint()";
-               onmousemove="doPaint(event.offsetX,event.offsetY)"
-               onmouseup="endPaint()">
-          </canvas>
-      <p> Set witdth <input id="width"
-                           type="text"
-                           onchange="setWidth(this.value)" />
-                            
-          Set height  <input id="height"
-                           type="text"
-                           onchange="setHeight(this.value)" />
-        
-      </p>
-      <p> Brush color <input type="color"
-                             value="000"
-                             onchange="changeColor(this.value)"/>
-        Brush size <input type="range";
-                          id="sizeInput";
-                          min="1";
-                          max="50";
-                          value="50";
-                         oninput="resizeBrush(this.value)"/>
-         <output id="sizeOutput">50</output>
-      </p>
-      <input type="button";
-             id="clear";
-             value="Clear Canvas";
-             onclick="clearCanvas()"
-            
-             />
-      <p>
-        
-      </p>
-    </html>
-    <!-- partial -->
-      <script  src="./script.js"></script>
+    <div class="empty">
     </div>
     <table class="date" id="date-2402">
         <tr>
