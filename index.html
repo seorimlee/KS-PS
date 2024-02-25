@@ -8,6 +8,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             var select = document.getElementById('header-date');
             var classADiv = document.getElementById('date-2401');
+            var classBDiv = document.getElementById('date-2402');
     
             select.addEventListener('change', function () {
                 // Get the selected option value
@@ -16,6 +17,7 @@
                 // Check the selected option value and navigate to the class A div accordingly
                 switch (selectedOptionValue) {
                 case 'date202402':
+                scrollToClassBDiv();
                     break;
                 case 'date202401':
                     // You can add more cases for other options if needed
@@ -34,8 +36,10 @@
       });
     
       function scrollToClassADiv() {
-        // Scroll to the class A div
         classADiv.scrollIntoView({ behavior: 'smooth' });
+      }
+      function scrollToClassBDiv() {
+        classBDiv.scrollIntoView({ behavior: 'smooth' });
       }
     });
     </script>
@@ -51,8 +55,24 @@
         width: 100%;
         border-spacing: 0;
     }
-    table.header{
-        margin-bottom: 70vh;
+    ul.header {
+    list-style: none;
+    display: flex;
+    position: fixed;
+    background-color: #0000;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 50vh;
+    padding-bottom: 50vh;
+}
+    li{
+        background-color: #0000;
+    }
+    .empty{
+        width: 100%;
+        height: 60vh;
     }
     th{
         padding: 0;
@@ -61,9 +81,7 @@
         padding: 0;
         vertical-align: top;
     }
-    .header td:nth-child(3){
-        text-align: right;
-    }
+
     .date td:nth-child(3){
         text-align: right;
     }
@@ -81,10 +99,11 @@
     }
 
     .row#w10 img{
-        width: 10%;
+        max-width: 15%;
+        object-fit: contain;
     }
     .row#w15 img{
-        width: 15%;
+        max-width: 23%;
     }
     .row#w30 img{
         width: 30%;
@@ -118,11 +137,11 @@
 
 @media screen and (min-width: 316px) and (max-width: 500px){
     .row#w10 img{
-    width: 49%;
+    max-width: 49%;
     padding-bottom: 5%;
     }
     .row#w15 img{
-    width: 49%;
+    max-width: 49%;
     padding-bottom: 5%;
     }
     .row#w60 img{
@@ -146,20 +165,20 @@
 
 </style>
 <body>
-    <table class="header">
-        <tr>
-            <td>KS-PS</td>
-            <td>lee seoerim<br>tjfla253@gmail.com</td>
-            <td>date.
-                <select id="header-date">
-                    <option value="date202402">2024.2</option>
-                    <option value="date202401">2024.1</option>
-                    <option value="date202312">2023.12</option>
-                    <option value="date202311">2023.11</option>
-                </select>
-            </td>
-        </tr>
-    </table>
+    <ul class="header">
+        <li>KS-PS</li>
+        <li>lee seoerim<br>tjfla253@gmail.com</li>
+        <li>date.
+            <select id="header-date">
+                <option>--date--</option>
+                <option value="date202402">2024.2</option>
+                <option value="date202401">2024.1</option>
+                <option value="date202312">2023.12</option>
+                <option value="date202311">2023.11</option>
+            </select>
+        </li>
+    </ul>
+    <div class="empty"></div>
     <table class="date" id="date-2402">
         <tr>
             <td></td>
@@ -170,11 +189,10 @@
 
     <div class="main">
         <div class="row" id="w10">
-            <img src="img/1.jpg" alt="/">
-            <img src="img/2.jpg" alt="/">
-            <img src="img/3.jpg" alt="/" style="padding-right: 20%;">
-            <img src="img/8.jpg" alt="/">
-            <img src="img/5.jpg" alt="/">
+            <img src="img/15.jpg" alt="/">
+            <img src="img/14.jpg" alt="/">
+            <img src="img/13-1.jpg" alt="/">
+            <img src="img/11.jpg" alt="/">
         </div>
     </div>
     <div class="main">
@@ -187,7 +205,7 @@
     <div class="main">
         <div class="row" id="w15">
             <img src="img/11.jpg" alt="/">
-            <img src="img/13-1.jpg" alt="/" style="width: 30%;">
+            <img src="img/9-1.jpg" alt="/" style="width: 30%;">
             <img src="img/10.jpg" alt="/">
         </div>
     </div>
@@ -201,8 +219,17 @@
     </table>
 
     <div class="main">
-        <div class="row" id="w60">
-            <img src="img/9-1.jpg" alt="/">
+        <div class="row" id="w10">
+            <img src="img/1.jpg" alt="/">
+            <img src="img/2.jpg" alt="/">
+            <img src="img/7.jpg" alt="/">
+            <img src="img/8.jpg" alt="/">
+        </div>
+    </div>
+    <div class="main">
+        <div class="row" id="w30">
+            <img src="img/5.jpg" alt="/">
+            <img src="img/3.jpg" alt="/">
         </div>
     </div>
 </body>
