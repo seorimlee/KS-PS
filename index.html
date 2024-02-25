@@ -4,7 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var select = document.getElementById('header-date');
+            var classADiv = document.getElementById('date-2401');
+    
+            select.addEventListener('change', function () {
+                // Get the selected option value
+                var selectedOptionValue = select.value;
+    
+                // Check the selected option value and navigate to the class A div accordingly
+                switch (selectedOptionValue) {
+                case 'date202402':
+                    break;
+                case 'date202401':
+                    // You can add more cases for other options if needed
+                    scrollToClassADiv();
+                    break;
+                case 'date202312':
+                    // You can add more cases for other options if needed
+                    break;
+                case 'date202311':
+                    // You can add more cases for other options if needed
+                    break;
+                default:
+                    // Handle other cases if needed
+                    break;
+                }
+      });
+    
+      function scrollToClassADiv() {
+        // Scroll to the class A div
+        classADiv.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    </script>
 </head>
 <style>
     *{
@@ -117,22 +151,20 @@
             <td>KS-PS</td>
             <td>lee seoerim<br>tjfla253@gmail.com</td>
             <td>date.
-                <select class="date">
-                    <option value="2023.12.21">2024.2.15</option>
-                    <option value="2023.12.21">2024.2.1</option>
-                    <option value="2023.12.21">2024.1.15</option>
-                    <option value="2023.12.21">2024.1.1</option>
-                    <option value="2023.12.21">2023.12</option>
-                    <option value="2023.12.21">2023.11</option>
+                <select id="header-date">
+                    <option value="date202402">2024.2</option>
+                    <option value="date202401">2024.1</option>
+                    <option value="date202312">2023.12</option>
+                    <option value="date202311">2023.11</option>
                 </select>
             </td>
         </tr>
     </table>
-    <table class="date">
+    <table class="date" id="date-2402">
         <tr>
             <td></td>
             <td></td>
-            <td>2023.12 - 2024. 02</td>
+            <td>2024.2</td>
         </tr>
     </table>
 
@@ -160,13 +192,18 @@
         </div>
     </div>
 
+    <table class="date" id="date-2401">
+        <tr>
+            <td></td>
+            <td></td>
+            <td>2024.1</td>
+        </tr>
+    </table>
+
     <div class="main">
         <div class="row" id="w60">
             <img src="img/9-1.jpg" alt="/">
         </div>
     </div>
-
-
-
 </body>
 </html>
